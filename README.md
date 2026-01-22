@@ -1,4 +1,4 @@
-# cloud-incident-response-gcp
+# Cloud Incident Response (GCP)
 
 ## Cloud Incident Response & Remediation (Google Cloud)
 
