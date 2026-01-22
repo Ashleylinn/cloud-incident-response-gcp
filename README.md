@@ -31,36 +31,23 @@ These findings indicated violations of least privilege, insufficient network seg
 ## Remediation Actions
 
 1. Compute & Identity Hardening
-
-- Shut down and deleted the compromised VM
-
-- Recreated a clean VM from a trusted snapshot
-
-- Removed public IP assignment
-
-- Enabled Secure Boot
-
-- Replaced default service account usage with a restricted service account
-
-- Applied network tags to enforce targeted firewall rules
+     - Shut down and deleted the compromised VM
+     - Recreated a clean VM from a trusted snapshot
+     - Removed public IP assignment
+     - Enabled Secure Boot
+     - Replaced default service account usage with a restricted service account
+     - Applied network tags to enforce targeted firewall rules
 
 2. Cloud Storage Security
-
-- Revoked public access to the storage bucket
-
-- Migrated from fine-grained ACLs to uniform bucket-level access
-
-- Removed anonymous and public principals
-
-- Enforced centralized IAM-based access control
+     - Revoked public access to the storage bucket
+     - Migrated from fine-grained ACLs to uniform bucket-level access
+     - Removed anonymous and public principals
+     - Enforced centralized IAM-based access control
 
 3. Network & Firewall Hardening
-
-- Removed overly permissive firewall rules allowing unrestricted ICMP, SSH, and RDP access
-
-- Created a restricted SSH firewall rule allowing access only via Google Cloud IAP
-
-- Enabled firewall rule logging for remaining rules to improve visibility and auditability
+    - Removed overly permissive firewall rules allowing unrestricted ICMP, SSH, and RDP access
+    - Created a restricted SSH firewall rule allowing access only via Google Cloud IAP
+    - Enabled firewall rule logging for remaining rules to improve visibility and auditability
 
 ## Compliance Verification
 
