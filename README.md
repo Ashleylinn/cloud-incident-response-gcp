@@ -13,7 +13,8 @@ The organization experienced unauthorized access to sensitive customer data, inc
 ## Investigation & Findings
 
 ![Figure 1: Security Command Center Misconfiguration Summary by Resource Type](screenshots/misconfigurations.png)
-![Figure 2: Active Security Command Center Findings Identified During Investigation](screenshots/findings.png)
+![Figure 2: Active Security Command Center Findings Showing Exposed Services and Misconfigurations](screenshots/finding1.png)
+![Figure 3: Active Security Command Center Findings Showing Exposed Services and Misconfigurations](screenshots/finding2.png)
 
 Using Google Cloud Security Command Center, I analyzed active findings and compliance reports. Key high-severity issues included:
 
@@ -42,22 +43,26 @@ These findings indicated violations of least privilege, insufficient network seg
      - Enabled Secure Boot
      - Replaced default service account usage with a restricted service account
      - Applied network tags to enforce targeted firewall rules
+![Figure 3: Compromised Compute Instance Identified and Removed](screenshots/compute-instance.png)
 
 2. Cloud Storage Security
      - Revoked public access to the storage bucket
      - Migrated from fine-grained ACLs to uniform bucket-level access
      - Removed anonymous and public principals
      - Enforced centralized IAM-based access control
+  
+![Figure 4: Cloud Storage Bucket with Public Access Prior to Remediation](screenshots/storage-bucket-public.png)
 
-3. Network & Firewall Hardening
+4. Network & Firewall Hardening
     - Removed overly permissive firewall rules allowing unrestricted ICMP, SSH, and RDP access
     - Created a restricted SSH firewall rule allowing access only via Google Cloud IAP
     - Enabled firewall rule logging for remaining rules to improve visibility and auditability
+  
+![Figure 5: Firewall Rules Showing Previously Overly Permissive SSH and RDP Access](screenshots/firewall-rules.png)
 
 ## Compliance Verification
 
-![Figure 3: PCI DSS Compliance Status After Remediation](screenshots/compliance-detail.png)
-
+![Figure 6: PCI DSS Compliance Report After Remediation Showing Resolved High-Severity Findings](screenshots/compliance-detail.png)
 
 After remediation, I re-ran the PCI DSS 3.2.1 compliance report. All high- and medium-severity findings related to the incident were resolved. Remaining low-severity findings (such as disabled VPC Flow Logs) were acknowledged as out of scope for this lab environment.
 
