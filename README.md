@@ -43,6 +43,7 @@ These findings indicated violations of least privilege, insufficient network seg
      - Enabled Secure Boot
      - Replaced default service account usage with a restricted service account
      - Applied network tags to enforce targeted firewall rules
+  
 ![Figure 3: Compromised Compute Instance Identified and Removed](screenshots/compute-instance.png)
 
 2. Cloud Storage Security
