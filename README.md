@@ -12,6 +12,8 @@ The organization experienced unauthorized access to sensitive customer data, inc
 
 ## Investigation & Findings
 
+![Figure 1: Security Command Center Misconfiguration Summary by Resource Type](screenshots/misconfigurations.png)
+
 Using Google Cloud Security Command Center, I analyzed active findings and compliance reports. Key high-severity issues included:
 
 - Publicly accessible Cloud Storage bucket (public ACLs)
