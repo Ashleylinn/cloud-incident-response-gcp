@@ -32,8 +32,6 @@ Using Google Cloud Security Command Center, I analyzed active findings and compl
 
 These findings indicated violations of least privilege, insufficient network segmentation, and lack of observability.
 
-![Figure 4: Example of Compromised Resource Identified During Investigation](screenshots/specific-misconfig-compromise.png)
-
 ## Remediation Actions
 
 1. Compute & Identity Hardening
