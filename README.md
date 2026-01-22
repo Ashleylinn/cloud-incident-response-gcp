@@ -13,6 +13,7 @@ The organization experienced unauthorized access to sensitive customer data, inc
 ## Investigation & Findings
 
 ![Figure 1: Security Command Center Misconfiguration Summary by Resource Type](screenshots/misconfigurations.png)
+![Figure 2: Active Security Command Center Findings Identified During Investigation](screenshots/findings.png)
 
 Using Google Cloud Security Command Center, I analyzed active findings and compliance reports. Key high-severity issues included:
 
@@ -29,6 +30,8 @@ Using Google Cloud Security Command Center, I analyzed active findings and compl
 - Malware-related domain activity from a compromised VM
 
 These findings indicated violations of least privilege, insufficient network segmentation, and lack of observability.
+
+![Figure 4: Example of Compromised Resource Identified During Investigation](screenshots/specific-misconfig-compromise.png)
 
 ## Remediation Actions
 
@@ -52,6 +55,9 @@ These findings indicated violations of least privilege, insufficient network seg
     - Enabled firewall rule logging for remaining rules to improve visibility and auditability
 
 ## Compliance Verification
+
+![Figure 3: PCI DSS Compliance Status After Remediation](screenshots/compliance-detail.png)
+
 
 After remediation, I re-ran the PCI DSS 3.2.1 compliance report. All high- and medium-severity findings related to the incident were resolved. Remaining low-severity findings (such as disabled VPC Flow Logs) were acknowledged as out of scope for this lab environment.
 
